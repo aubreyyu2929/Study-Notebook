@@ -1,4 +1,4 @@
-os.path包主要用于处理字符串路径
+# os.path包主要用于处理字符串路径
 
 import os.path
 path = '/home/doc/file.doc'
