@@ -61,8 +61,7 @@ Pipeline 的中间过程由scikit-learn相适配的转换器（transformer）构
 
 
 
-
-
+![pipline workflow](https://img4.sycdn.imooc.com/5b1f803100018ed106890498.jpg)
 
  
 
