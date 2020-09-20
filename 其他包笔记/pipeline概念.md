@@ -19,7 +19,7 @@
 接下来我们以一个具体的例子来演示sklearn库中强大的Pipeline用法：
 
 1. 加载数据集
-'''
+```
 from pandas as pdfrom sklearn.cross_validation import train_test_splitfrom sklearn.preprocessing import LabelEncoder
 
 df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/'
@@ -29,7 +29,7 @@ y = encoder.fit_transform(y)
                     >>> encoder.transform(['M', 'B'])
                     array([1, 0])
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.2, random_state=0)
-'''
+```
 
 2. 构思算法的流程
 可放在Pipeline中的步骤可能有：
@@ -39,7 +39,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.2, random_s
 既然是分类器，classifier也是少不了的，自然是最后一个环节
 
 中间可加上比如数据降维（PCA）
-'''
+```
 from sklearn.preprocessing import StandardScalerfrom sklearn.decomposition import PCAfrom sklearn.linear_model import LogisticRegressionfrom sklearn.pipeline import Pipeline
 
 pipe_lr = Pipeline([('sc', StandardScaler()),
@@ -52,7 +52,7 @@ Pipeline对象接受二元tuple构成的list，每一个二元 tuple 中的第�
 
 Pipeline([('sc', StandardScaler()), ('pca', PCA(n_components=2)), ('clf', LogisticRegression(random_state=1))])
 
-'''
+```
 
 3. Pipeline执行流程的分析
 Pipeline 的中间过程由scikit-learn相适配的转换器（transformer）构成，最后一步是一个estimator。比如上述的代码，StandardScaler和PCA transformer 构成intermediate steps，LogisticRegression 作为最终的estimator。
