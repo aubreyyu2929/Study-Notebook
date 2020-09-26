@@ -1,5 +1,6 @@
 # pathlib包比os更优雅更快捷
 python3.4+ 都自带标准库pathlib，所以你不需要再通过pip3 安装
+官方包文档：https://docs.python.org/3/library/pathlib.html
 
 实例
 ```
